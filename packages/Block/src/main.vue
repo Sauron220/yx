@@ -1,0 +1,96 @@
+<template>
+  <div class="section">
+    <div v-if="!sourceData">
+      <h3 v-if="able" class="cursor text-link" @click="modal">
+        {{ title }}
+      </h3>
+      <h3 v-else>{{ title }}</h3>
+      <slot />
+    </div>
+    <el-collapse v-else :value="open">
+      <el-collapse-item name="1">
+        <template slot="title">
+          <h3 v-if="able" class="cursor text-link" @click="modal">
+            {{ title }}
+          </h3>
+          <h3 v-else>{{ title }}</h3>
+        </template>
+        <slot />
+      </el-collapse-item>
+    </el-collapse>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Block',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    able: {
+      type: Boolean,
+      default: false
+    },
+    sourceData: {
+      type: [Object, Array],
+      default: () => {}
+    }
+  },
+  computed: {
+    open () {
+      if (!this.sourceData && this.sourceData.length <= 0) {
+        return ''
+      } else {
+        const arr = Object.values(this.sourceData)
+        const newArr = arr.filter(item => item) // 去掉空值
+        if (newArr.length > 0) {
+          const fora1 = newArr.reduce(
+            item =>
+              item.concat(item => {
+                console.log(item)
+                if (item && item instanceof Object) {
+                  return Object.values(item)
+                } else if (item) {
+                  return item
+                } else {
+                  return ''
+                }
+              }),
+            []
+          )
+          return fora1.length > 0 ? '1' : ''
+        } else {
+          return ''
+        }
+      }
+    }
+  },
+  methods: {
+    modal () {
+      this.$emit('show')
+    },
+    formatterVal (arr) {
+      arr.foreach(item => {})
+      return arr.map(item => {
+        if (item && item instanceof Object) {
+          return Object.values(item)
+        } else if (item) {
+          return item
+        } else {
+          return ''
+        }
+      })
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.section {
+  .cursor {
+    cursor: pointer;
+  }
+}
+</style>

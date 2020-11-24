@@ -1,15 +1,19 @@
 {
-  "name": "yx",
-  "version": "1.0.0",
-  "private": true,
+  "name": "yx-plus",
+  "version": "1.0.1-0",
+  "private": false,
+  "keywords": ["ui", "vue", "frontend", "components"],
+  "description": "自定义组件库",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name yx --dest lib src/index.js"
   },
-  "main": "index.js",
+  "main": "./src/index.js",
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.14.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -24,6 +28,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -45,7 +51,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "_id": "yx@1.0.0",
-  "license": "MIT",
-  "readme": "ERROR: No README data found!"
+  "license": "MIT"
 }

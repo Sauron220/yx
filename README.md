@@ -1,4 +1,4 @@
-# yx
+# yx-plus
 
 ## Project setup
 ```
