@@ -2,15 +2,30 @@
   "name": "yx-plus",
   "version": "1.0.1-0",
   "private": false,
-  "keywords": ["ui", "vue", "frontend", "components"],
+  "keywords": [
+    "yx",
+    "yx-ui",
+    "ui",
+    "vue",
+    "frontend",
+    "components"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "packages",
+    "types"
+  ],
   "description": "自定义组件库",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "new": "node ./build/new.js",
     "lib": "vue-cli-service build --target lib --name yx --dest lib src/index.js"
   },
   "main": "./src/index.js",
+  "typings": "types/index.d.ts",
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.14.1",
@@ -22,14 +37,17 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
+    "cp-cli": "^2.0.0",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "file-save": "^0.2.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
+    "uppercamelcase": "^3.0.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
