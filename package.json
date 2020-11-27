@@ -1,6 +1,6 @@
 {
   "name": "yx-plus",
-  "version": "1.0.1-0",
+  "version": "1.0.1-1",
   "private": false,
   "keywords": [
     "yx",
@@ -22,9 +22,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "new": "node ./build/new.js",
+    "build:theme": "node build/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "lib": "vue-cli-service build --target lib --name yx --dest lib src/index.js"
   },
-  "main": "./src/index.js",
+  "main": "./lib/yx.umd.min.js",
   "typings": "types/index.d.ts",
   "dependencies": {
     "core-js": "^3.6.5",
@@ -45,6 +46,10 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "file-save": "^0.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.1.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "uppercamelcase": "^3.0.0",
@@ -69,5 +74,9 @@
     "last 2 versions",
     "not dead"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Sauron220/yx.git"
+  },
   "license": "MIT"
 }

@@ -1,9 +1,6 @@
 import Vue from 'vue'
 
 import { YXUIComponent } from './component'
-
-import { YXTest } from './test'
-
 export interface InstallationOptions {
   locale: any,
   i18n: any,
@@ -22,7 +19,3 @@ export function install (vue: typeof Vue, options: InstallationOptions): void
 
 /** YXUIComponent component common definition */
 export type Component = YXUIComponent
-
-/** Test Component */
-export class Test extends YXTest {}
-
