@@ -16,7 +16,7 @@
     "packages",
     "types"
   ],
-  "description": "自定义组件库",
+  "description": "A Component Library for Vue.js.",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -25,8 +25,10 @@
     "build:theme": "node build/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "lib": "vue-cli-service build --target lib --name yx --dest lib src/index.js"
   },
-  "main": "./lib/yx.umd.min.js",
+  "main": "lib/yx.umd.min.js",
   "typings": "types/index.d.ts",
+  "unpkg": "lib/index.js",
+  "style": "lib/theme-chalk/index.css",
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.14.1",
