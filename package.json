@@ -23,7 +23,8 @@
     "lint": "vue-cli-service lint",
     "new": "node ./build/new.js",
     "build:theme": "node build/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
-    "lib": "vue-cli-service build --target lib --name yx --dest lib src/index.js"
+    "lib": "vue-cli-service build --target lib --name yx --dest lib src/index.js",
+    "pub": "npm run lib && npm run build:theme"
   },
   "main": "lib/yx.umd.min.js",
   "typings": "types/index.d.ts",
