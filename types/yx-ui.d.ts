@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
-import { YXUIComponent } from './component'
+import { YXUIComponent } from './component'import { YXPageForm } from './page-form'
+
 export interface InstallationOptions {
   locale: any,
   i18n: any,
@@ -19,3 +20,6 @@ export function install (vue: typeof Vue, options: InstallationOptions): void
 
 /** YXUIComponent component common definition */
 export type Component = YXUIComponent
+
+/** PageForm Component */
+export class PageForm extends YXPageForm {}

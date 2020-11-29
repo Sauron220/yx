@@ -23,7 +23,7 @@ themes.forEach((theme) => {
     const fileName = key + (isSCSS ? '.scss' : '.css')
     indexContent += '@import "./' + fileName + '";\n'
     const filePath = path.resolve(basepath, theme, 'src', fileName)
-    console.log(filePath, '<===========')
+
     if (!fileExists(filePath)) {
       fs.writeFileSync(filePath, '', 'utf8')
       console.log(theme, ' 创建遗漏的 ', fileName, ' 文件')

@@ -59,7 +59,7 @@ export default {
                 }
               }),
             []
-          )
+          ).filter(item => item)
           return fora1.length > 0 ? '1' : ''
         } else {
           return ''
