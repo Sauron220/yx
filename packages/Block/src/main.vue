@@ -46,20 +46,11 @@ export default {
         const arr = Object.values(this.sourceData)
         const newArr = arr.filter(item => item) // 去掉空值
         if (newArr.length > 0) {
-          const fora1 = newArr.reduce(
-            item =>
-              item.concat(item => {
-                console.log(item)
-                if (item && item instanceof Object) {
-                  return Object.values(item)
-                } else if (item) {
-                  return item
-                } else {
-                  return ''
-                }
-              }),
-            []
-          ).filter(item => item)
+          const fora1 = newArr.reduce((pre, cur) => {
+            const curArr = cur instanceof Object ? Object.values(cur) : cur
+            return pre.concat(curArr)
+          }, []).filter(item => item)
+
           return fora1.length > 0 ? '1' : ''
         } else {
           return ''
