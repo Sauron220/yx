@@ -1,5 +1,5 @@
 // 导入颜色选择器组件
-import Block from '../packages/Block'
+import Block from 'packages/block'
 
 // 存储组件列表
 const components = [

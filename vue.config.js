@@ -1,3 +1,11 @@
+'use strict'
+
+const path = require('path')
+
+function resolve (dir) {
+  return path.join(__dirname, dir)
+}
+
 module.exports = {
   pages: {
     index: {
@@ -8,6 +16,12 @@ module.exports = {
   },
   css: { extract: false },
   configureWebpack: {
+    resolve: {
+      alias: {
+        '@': resolve('src'),
+        packages: resolve('packages')
+      }
+    },
     output: {
       libraryExport: 'default'
     }

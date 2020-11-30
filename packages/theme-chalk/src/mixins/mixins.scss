@@ -188,6 +188,8 @@
   }
 }
 
+/* Text color
+ -------------------------- */
 @include b(text) {
   @include e(link) {
     cursor: pointer;

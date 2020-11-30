@@ -1,12 +1,7 @@
 <template>
   <div id="app">
+    <router-view></router-view>
     <el-button type="primary">按钮1</el-button>
-    <Block
-      title="测试"
-      :sourceData="{ 'age': 12 }"
-    >
-      <p>这是测试</p>
-    </Block>
   </div>
 </template>
 

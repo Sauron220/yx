@@ -1,7 +1,7 @@
 <template>
   <div class="yx-block">
     <div v-if="!sourceData">
-      <h3 v-if="able" class="yx-block__cursor yx-text__link" @click="modal">
+      <h3 v-if="ableClick" class="yx-block__cursor yx-text__link" @click="modal">
         {{ title }}
       </h3>
       <h3 v-else>{{ title }}</h3>
@@ -10,7 +10,7 @@
     <el-collapse v-else :value="open">
       <el-collapse-item name="1">
         <template slot="title">
-          <h3 v-if="able" class="yx-block__cursor yx-text__link" @click="modal">
+          <h3 v-if="ableClick" class="yx-block__cursor yx-text__link" @click="modal">
             {{ title }}
           </h3>
           <h3 v-else>{{ title }}</h3>
@@ -29,7 +29,7 @@ export default {
       type: String,
       default: ''
     },
-    able: {
+    ableClick: {
       type: Boolean,
       default: false
     },

@@ -6,5 +6,8 @@ export declare class Block extends YXUIComponent {
   title: string
 
   /** If closable or not */
-  closable: boolean
+  ableClick: boolean
+
+  /** Original data source */
+  sourceData: object
 }
