@@ -19,7 +19,8 @@ module.exports = {
     resolve: {
       alias: {
         '@': resolve('src'),
-        packages: resolve('packages')
+        packages: resolve('packages'),
+        examples: resolve('examples')
       }
     },
     output: {
@@ -39,5 +40,15 @@ module.exports = {
         // 修改它的选项...
         return options
       })
+      .end()
+
+    config.module
+      .rule('markdown')
+      .test(/\.md$/)
+      .use('vue-loader')
+      .loader('vue-loader')
+      .end()
+      .use('md-loader')
+      .loader(resolve('./build/md-loader'))
   }
 }

@@ -1,0 +1,95 @@
+{
+  "zh-CN": [
+    {
+      "name": "更新日志",
+      "path": "/changelog"
+    },
+    {
+      "name": "开发指南",
+      "children": [
+        {
+          "path": "/installation",
+          "name": "安装"
+        },
+        {
+          "path": "/quickstart",
+          "name": "快速上手"
+        }
+      ]
+    },
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "path": "/block",
+              "title": "Block 折叠版区块"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "en-US": [
+    {
+      "name": "Changelog",
+      "path": "/changelog"
+    },
+    {
+      "name": "Components",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "path": "/layout",
+              "title": "Layout"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "name": "Changelog",
+      "path": "/changelog"
+    },
+    {
+      "name": "Components",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "path": "/layout",
+              "title": "Layout"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fr-FR": [
+    {
+      "name": "Changelog",
+      "path": "/changelog"
+    },
+    {
+      "name": "Composants",
+      "groups": [
+        {
+          "groupName": "Basiques",
+          "list": [
+            {
+              "path": "/layout",
+              "title": "Layout"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
