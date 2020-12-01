@@ -132,16 +132,6 @@ export default {
           search: 'Search',
           empty: 'No results',
           index: 'en'
-        },
-        es: {
-          search: 'Buscar',
-          empty: 'No hay datos que coincidan',
-          index: 'es'
-        },
-        'fr-FR': {
-          search: 'Rechercher',
-          empty: 'Aucun résultat',
-          index: 'fr'
         }
       }
     }
@@ -169,8 +159,8 @@ export default {
 
   methods: {
     initIndex () {
-      const client = algoliasearch('4C63BTGP6S', '0729c3c7f4dc8db7395ad0b19c0748d2')
-      this.index = client.initIndex(`element-${this.lang ? this.langs[this.lang].index : 'zh'}`)
+      const client = algoliasearch('PQM2D5QDU5', '8678c074ab62d7490aaa64fe8d0093e3')
+      this.index = client.initIndex(`yx-${this.lang ? this.langs[this.lang].index : 'zh'}`)
     },
 
     querySearch (query, cb) {

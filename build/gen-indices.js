@@ -14,7 +14,7 @@ const langs = {
 ['zh-CN'].forEach(lang => {
   const indexName = langs[lang]
   const index = client.initIndex(indexName)
-  console.log(index, '<=======')
+
   index.clearIndex(err => {
     if (err) return
     fs.readdir(path.resolve(__dirname, `../examples/docs/${lang}`), (err, files) => {

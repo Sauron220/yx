@@ -84,6 +84,8 @@
 
     .nav-logo,
     .nav-logo-small {
+      width: 146px;
+      height: 48px;
       vertical-align: sub;
     }
 
@@ -273,7 +275,7 @@
           <!-- logo -->
           <slot>
             <img
-              src="../assets/images/element-logo.svg"
+              src="../assets/images/logo.svg"
               alt="element-logo"
               class="nav-logo">
             <img

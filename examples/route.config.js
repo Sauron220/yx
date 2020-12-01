@@ -185,5 +185,4 @@ route = route.concat([{
   path: '*',
   redirect: defaultPath
 }])
-console.log('route', route)
 export default route
