@@ -51,45 +51,5 @@
         }
       ]
     }
-  ],
-  "es": [
-    {
-      "name": "Changelog",
-      "path": "/changelog"
-    },
-    {
-      "name": "Components",
-      "groups": [
-        {
-          "groupName": "Basic",
-          "list": [
-            {
-              "path": "/layout",
-              "title": "Layout"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "fr-FR": [
-    {
-      "name": "Changelog",
-      "path": "/changelog"
-    },
-    {
-      "name": "Composants",
-      "groups": [
-        {
-          "groupName": "Basiques",
-          "list": [
-            {
-              "path": "/layout",
-              "title": "Layout"
-            }
-          ]
-        }
-      ]
-    }
   ]
 }
