@@ -82,7 +82,10 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "standard/no-callback-literal": 0
+      "standard/no-callback-literal": 0,
+      "vue/comment-directive": 0,
+      "vue/valid-template-root": 0,
+      "no-trailing-spaces": 0
     }
   },
   "browserslist": [

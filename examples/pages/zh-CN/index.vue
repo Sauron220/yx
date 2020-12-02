@@ -313,7 +313,7 @@
             <img src="../../assets/images/component.png" alt />
             <h3>组件</h3>
             <p>使用组件 Demo 快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。</p>
-            <router-link active-class="active" to="/zh-CN/component/layout" exact>查看详情</router-link>
+            <router-link active-class="active" to="/zh-CN/component" exact>查看详情</router-link>
           </div>
         </li>
         <li>

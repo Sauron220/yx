@@ -1,12 +1,19 @@
 'use strict'
 
 const path = require('path')
-
 function resolve (dir) {
   return path.join(__dirname, dir)
 }
 
 module.exports = {
+  publicPath: '/',
+  productionSourceMap: false,
+  devServer: {
+    host: '0.0.0.0',
+    port: process.env.port || 8088,
+    open: true,
+    disableHostCheck: true
+  },
   pages: {
     index: {
       entry: 'examples/main.js',
@@ -30,16 +37,22 @@ module.exports = {
   // 扩展 webpack 配置，使 packages 加入编译
   chainWebpack: config => {
     config.module
+      .rule('vue')
+      .use('vue-loader')
+      .loader('vue-loader')
+      .tap(options => {
+        options.compilerOptions.preserveWhitespace = true
+        return options
+      })
+      .end()
+
+    config.module
       .rule('js')
       .include
       .add('/packages')
       .end()
       .use('babel')
       .loader('babel-loader')
-      .tap(options => {
-        // 修改它的选项...
-        return options
-      })
       .end()
 
     config.module
@@ -47,8 +60,16 @@ module.exports = {
       .test(/\.md$/)
       .use('vue-loader')
       .loader('vue-loader')
+      .tap(options => {
+        return {
+          ...options,
+          compilerOptions: {
+            preserveWhitespace: true
+          }
+        }
+      })
       .end()
       .use('md-loader')
-      .loader(resolve('./build/md-loader'))
+      .loader(resolve('./build/md-loader/index.js'))
   }
 }

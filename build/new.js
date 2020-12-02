@@ -43,7 +43,8 @@ export default {
   },
   {
     filename: path.join('../../examples/docs/zh-CN', `${componentname}.md`),
-    content: `## ${ComponentName} ${chineseName}`
+    content: `<!-- ${ComponentName} ${chineseName} ${new Date().toLocaleString()} -->
+## ${ComponentName} ${chineseName}`
   },
   {
     filename: path.join('../theme-chalk/src', `${componentname}.scss`),
