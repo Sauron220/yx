@@ -1,3 +1,4 @@
 {
-  "block": "./packages/block/index.js"
+  "block": "./packages/block/index.js",
+  "page-form": "./packages/page-form/index.js"
 }

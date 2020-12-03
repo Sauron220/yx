@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'Block',
+  name: 'YxBlock',
   props: {
     title: {
       type: String,

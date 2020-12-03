@@ -1,0 +1,40 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(page-form) {
+  background: #ffffff;
+  margin-bottom: 5px;
+  padding: 5px 5px 0;
+  border-radius: 2px;
+
+  @include b(col-auto) {
+    width: auto;
+    flex: 1;
+    align-self: flex-end;
+
+    @include b(search-btn) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  @include b(search-btn) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .col-fluid {
+    text-align: right;
+  }
+
+  .el-form--label-top {
+    .el-form-item__label {
+      padding-bottom: 6px;
+      line-height: 22px;
+    }
+  }
+
+  .el-form-item--mini.el-form-item {
+    margin-bottom: 10px;
+  }
+}

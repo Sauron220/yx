@@ -26,6 +26,10 @@
             {
               "path": "/block",
               "title": "Block 区块"
+            },
+            {
+              "path": "/page-form",
+              "title": "PageForm 条件筛选"
             }
           ]
         }
@@ -38,6 +42,19 @@
       "path": "/changelog"
     },
     {
+      "name": "Development",
+      "children": [
+        {
+          "path": "/installation",
+          "name": "Installation"
+        },
+        {
+          "path": "/quickstart",
+          "name": "Quick Start"
+        }
+      ]
+    },
+    {
       "name": "Components",
       "groups": [
         {
@@ -46,6 +63,10 @@
             {
               "path": "/layout",
               "title": "Layout"
+            },
+            {
+              "path": "/page-form",
+              "title": "PageForm"
             }
           ]
         }

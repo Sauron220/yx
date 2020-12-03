@@ -37,7 +37,7 @@ export default ${ComponentName}`
 
 <script>
 export default {
-  name: 'YX${ComponentName}'
+  name: 'Yx${ComponentName}'
 }
 </script>`
   },
@@ -109,7 +109,7 @@ Files.forEach(file => {
 const navConfigFile = require('../examples/nav.config.json')
 
 Object.keys(navConfigFile).forEach(lang => {
-  const groups = navConfigFile[lang][4].groups
+  const groups = navConfigFile[lang][2].groups
   groups[groups.length - 1].list.push({
     path: `/${componentname}`,
     title: lang === 'zh-CN' && componentname !== chineseName

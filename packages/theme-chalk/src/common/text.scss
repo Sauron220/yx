@@ -1,0 +1,26 @@
+@import "../mixins/mixins";
+@import "./var.scss";
+
+/* Text color
+ -------------------------- */
+@include b(text) {
+  @include e(link) {
+    cursor: pointer;
+    color: $--text-link-color-base;
+  }
+
+  @include when(success) {
+    cursor: pointer;
+    color: $--text-link-success-color;
+  }
+
+  @include when(warning) {
+    cursor: pointer;
+    color: $--text-link-warn-color;
+  }
+
+  @include when(danger) {
+    cursor: pointer;
+    color: $--text-link-danger-color;
+  }
+}

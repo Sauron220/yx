@@ -9,25 +9,25 @@
 :::demo Block 通过 slot 展示自定义内容。
 ```html
 <template>
-  <Block
+  <yx-block
     title="This is panel header 1"
     :sourceData="sourceData1"
   >
     <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
-  </Block>
-  <Block
+  </yx-block>
+  <yx-block
     title="This is panel header 2"
     :sourceData="sourceData2"
   >
     <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
-  </Block>
-  <Block
+  </yx-block>
+  <yx-block
     title="This is panel header 3"
     :ableClick="true"
     @show="toast"
   >
     <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
-  </Block>
+  </yx-block>
 </template>
 <script>
 export default {

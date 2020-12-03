@@ -18,6 +18,7 @@ module.exports = {
     index: {
       entry: 'examples/main.js',
       template: 'public/index.html',
+      title: '尧信UI',
       filename: 'index.html'
     }
   },

@@ -1,6 +1,5 @@
 import navConfig from './nav.config'
 import langs from './i18n/route'
-console.log('langs', langs)
 
 const LOAD_MAP = {
   'zh-CN': name => {
