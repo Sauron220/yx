@@ -61,18 +61,6 @@ export default {
   methods: {
     modal () {
       this.$emit('show')
-    },
-    formatterVal (arr) {
-      arr.foreach(item => {})
-      return arr.map(item => {
-        if (item && item instanceof Object) {
-          return Object.values(item)
-        } else if (item) {
-          return item
-        } else {
-          return ''
-        }
-      })
     }
   }
 }

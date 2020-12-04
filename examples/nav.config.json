@@ -30,6 +30,14 @@
             {
               "path": "/page-form",
               "title": "PageForm 条件筛选"
+            },
+            {
+              "path": "/page-table",
+              "title": "PageTable 表格"
+            },
+            {
+              "path": "/row",
+              "title": "Row 网格排版"
             }
           ]
         }
@@ -67,6 +75,14 @@
             {
               "path": "/page-form",
               "title": "PageForm"
+            },
+            {
+              "path": "/page-table",
+              "title": "PageTable"
+            },
+            {
+              "path": "/row",
+              "title": "Row"
             }
           ]
         }

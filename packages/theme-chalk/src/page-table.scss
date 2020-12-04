@@ -1,0 +1,8 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(page-table) {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 2px;
+}

@@ -1,7 +1,7 @@
 import { YXUIComponent } from './component'
 
 /** Block Component */
-export declare class Block extends YXUIComponent {
+export declare class YXBlock extends YXUIComponent {
   /** Title */
   title: string
 

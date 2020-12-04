@@ -24,3 +24,15 @@
     color: $--text-link-danger-color;
   }
 }
+
+/* Label text color font-size
+ -------------------------- */
+@include b(label) {
+  color: $--label-color-base;
+  font-size: $--font-size-base;
+
+  @include e(content) {
+    color: $--label-content-color;
+    font-size: $--font-size-base;
+  }
+}

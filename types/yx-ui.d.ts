@@ -3,6 +3,8 @@ import Vue from 'vue'
 import { YXUIComponent } from './component'
 import { YXBlock } from './block'
 import { YXPageForm } from './page-form'
+import { YXPageTable } from './page-table'
+import { YXRow } from './row'
 
 export interface InstallationOptions {
   locale: any,
@@ -23,11 +25,14 @@ export function install (vue: typeof Vue, options: InstallationOptions): void
 /** YXUIComponent component common definition */
 export type Component = YXUIComponent
 
-/** PageForm Component */
-export class PageForm extends YXPageForm {}
-
 /** Block Component */
 export class Block extends YXBlock {}
 
 /** PageForm Component */
 export class PageForm extends YXPageForm {}
+
+/** PageTable Component */
+export class PageTable extends YXPageTable {}
+
+/** Row Component */
+export class Row extends YXRow {}
