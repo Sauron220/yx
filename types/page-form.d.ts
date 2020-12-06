@@ -64,7 +64,7 @@ export declare class YXPageForm extends YXUIComponent {
   /** Label Width */
   labelWidth: string
 
-  /** Label Postition */
+  /** Label Position */
   labelPosition: LabelPosition
 
   /** Ref */

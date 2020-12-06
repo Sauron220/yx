@@ -206,7 +206,7 @@ export default {
       // since 2.6.2 use code rather than jsfiddle https://blog.codepen.io/documentation/api/prefill/
       const { script, html, style } = this.codepen
       const resourcesTpl = '<scr' + 'ipt src="//unpkg.com/vue/dist/vue.js"></scr' + 'ipt>' +
-        '\n<scr' + `ipt src="//unpkg.com/yx-plus@${version}/lib/index.js"></scr` + 'ipt>'
+        '\n<scr' + `ipt src="//unpkg.com/yx-plus@${version}/lib/yx.umd.min.js"></scr` + 'ipt>'
       let jsTpl = (script || '').replace(/export default/, 'var Main =').trim()
       const htmlTpl = `${resourcesTpl}\n<div id="app">\n${html.trim()}\n</div>`
       const cssTpl = `@import url("//unpkg.com/yx-plus@${version}/lib/theme-chalk/index.css");\n${(style || '').trim()}\n`
