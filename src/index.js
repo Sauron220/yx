@@ -4,12 +4,14 @@ import Block from 'packages/block'
 import PageForm from 'packages/page-form'
 import PageTable from 'packages/page-table'
 import Row from 'packages/row'
+import Dialog from 'packages/dialog'
 
 const components = [
   Block,
   PageForm,
   PageTable,
-  Row
+  Row,
+  Dialog
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -26,10 +28,11 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.0.1-1',
+  version: '1.0.2',
   install,
   Block,
   PageForm,
   PageTable,
-  Row
+  Row,
+  Dialog
 }

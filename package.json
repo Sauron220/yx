@@ -1,6 +1,6 @@
 {
   "name": "yx-plus",
-  "version": "1.0.1-1",
+  "version": "1.0.2",
   "private": false,
   "keywords": [
     "yx",
@@ -23,7 +23,7 @@
     "lint": "vue-cli-service lint",
     "fix": "vue-cli-service lint --fix --ext .js,.vue examples",
     "new": "node ./build/new.js",
-    "build:file": "node build/build-entry.js",
+    "build:file": "node build/build-entry.js && node build/version.js",
     "build:theme": "node build/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
     "lib": "vue-cli-service build --target lib --name yx --dest lib src/index.js",
     "pub": "npm run build:file && npm run lib && npm run build:theme && node ./build/gen-indices.js"
@@ -96,9 +96,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Sauron220/yx.git"
-  },
   "license": "MIT"
 }

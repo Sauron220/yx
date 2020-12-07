@@ -5,6 +5,7 @@ import { YXBlock } from './block'
 import { YXPageForm } from './page-form'
 import { YXPageTable } from './page-table'
 import { YXRow } from './row'
+import { YXDialog } from './dialog'
 
 export interface InstallationOptions {
   locale: any,
@@ -36,3 +37,6 @@ export class PageTable extends YXPageTable {}
 
 /** Row Component */
 export class Row extends YXRow {}
+
+/** Dialog Component */
+export class Dialog extends YXDialog {}

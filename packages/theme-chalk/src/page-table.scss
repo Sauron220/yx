@@ -5,4 +5,18 @@
   background-color: #fff;
   padding: 5px;
   border-radius: 2px;
+
+  .el-table,
+  .el-table thead.is-group {
+    th {
+      background-color: #f0f7ff;
+      color: #333;
+      padding: 2px 0;
+    }
+  }
+
+  .el-table th.gutter {
+    width: 0px !important;
+    display: table-cell !important;
+  }
 }

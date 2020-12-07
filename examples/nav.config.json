@@ -38,6 +38,10 @@
             {
               "path": "/row",
               "title": "Row 网格排版"
+            },
+            {
+              "path": "/dialog",
+              "title": "Dialog 全局弹窗"
             }
           ]
         }
@@ -83,6 +87,10 @@
             {
               "path": "/row",
               "title": "Row"
+            },
+            {
+              "path": "/dialog",
+              "title": "Dialog"
             }
           ]
         }

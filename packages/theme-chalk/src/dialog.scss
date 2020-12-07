@@ -1,0 +1,32 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(dialog) {
+  .el-dialog {
+    left: 0;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .el-dialog__header {
+    padding: 30px 30px 20px;
+  }
+
+  .el-dialog__body {
+    padding: 30px;
+  }
+
+  .el-dialog__footer {
+    padding: 10px 30px 30px;
+  }
+
+  .el-notification__content p {
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: left;
+  }
+
+  .v-modal {
+    opacity: 0.3;
+  }
+}

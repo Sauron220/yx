@@ -2,5 +2,6 @@
   "block": "./packages/block/index.js",
   "page-form": "./packages/page-form/index.js",
   "page-table": "./packages/page-table/index.js",
-  "row": "./packages/row/index.js"
+  "row": "./packages/row/index.js",
+  "dialog": "./packages/dialog/index.js"
 }
