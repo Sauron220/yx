@@ -1,6 +1,6 @@
 {
   "name": "yx-plus",
-  "version": "1.0.2",
+  "version": "1.0.2-1",
   "private": false,
   "keywords": [
     "yx",
@@ -96,5 +96,9 @@
     "last 2 versions",
     "not dead"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Sauron220/yx.git"
+  },
   "license": "MIT"
 }
