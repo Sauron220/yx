@@ -18,7 +18,7 @@
 
 /* Tabs
  -------------------------- */
- .el-tabs--border-card > .el-tabs__header {
+.el-tabs--border-card>.el-tabs__header {
   background-color: #fff;
 
   .el-tabs__item.is-active {
@@ -29,4 +29,89 @@
 
 .el-tabs__content {
   padding: 5px !important;
+}
+
+/* Table Cell
+ -------------------------- */
+.cell {
+  .el-tag {
+    margin-right: 0;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    width: 60px;
+  }
+}
+
+/* Dropdown
+ -------------------------- */
+.el-dropdown-menu {
+  a {
+    display: block;
+  }
+}
+
+.el-select-dropdown__item {
+  font-size: 12px;
+  padding: 0 5px;
+  height: 24px;
+  line-height: 24px;
+}
+
+/* fix date-picker ui bug in filter-item
+ -------------------------- */
+.el-range-editor.el-input__inner {
+  display: inline-flex !important;
+}
+
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+/* 所有的输入框长度一致
+ -------------------------- */
+.el-date-editor.el-input,
+.el-date-editor--daterange.el-input__inner,
+.el-date-editor--timerange.el-input__inner {
+  width: 100%;
+}
+
+.el-select {
+  display: block;
+}
+
+.el-input-number--mini {
+  display: block;
+  width: 100%;
+}
+
+/* Sub menu
+ -------------------------- */
+.el-submenu {
+  .el-menu-item {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+/* el-link
+ -------------------------- */
+.el-link {
+  font-size: 12px;
+}
+
+/* el-button
+ -------------------------- */
+.el-button:not(.el-button--text) {
+  min-width: 76px;
 }
