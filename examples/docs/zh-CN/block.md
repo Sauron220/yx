@@ -11,19 +11,19 @@
 <template>
   <yx-block
     title="This is panel header 1"
-    :sourceData="sourceData1"
+    :source-data="sourceData1"
   >
     <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
   </yx-block>
   <yx-block
     title="This is panel header 2"
-    :sourceData="sourceData2"
+    :source-data="sourceData2"
   >
     <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
   </yx-block>
   <yx-block
     title="This is panel header 3"
-    :ableClick="true"
+    :able-click="true"
     @show="toast"
   >
     <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
