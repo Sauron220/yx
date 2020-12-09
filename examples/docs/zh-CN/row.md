@@ -76,7 +76,7 @@ export default {
 >
   <template #header>
     <div class="action-btn-wrap">
-      <el-button type="primary">处理</el-button>
+      <el-button size="mini" type="primary">处理</el-button>
     </div>
   </template>
 </yx-row>

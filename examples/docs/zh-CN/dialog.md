@@ -9,7 +9,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 
 :::demo 需要设置`visible`属性，它接收`Boolean`，当为`true`时显示 Dialog。Dialog 分为两个部分：`body`和`footer`，`footer`需要具名为`footer`的`slot`。`title`属性用于定义标题，它是可选的，默认值为空。最后，本例还展示了`before-close`的用法。
 ```html
-<el-button type="primary" @click="visible = true">打开Dialog</el-button>
+<el-button size="mini" type="primary" @click="visible = true">打开Dialog</el-button>
 <yx-dialog
   title="全局弹窗"
   :visible.sync="visible"
@@ -17,8 +17,8 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 >
   <p>测试</p>
   <template #footer>
-    <el-button @click="visible = false">关闭</el-button>
-    <el-button type="primary">操作1</el-button>
+    <el-button size="mini" @click="visible = false">关闭</el-button>
+    <el-button size="mini" type="primary">操作1</el-button>
   </template>
 </yx-dialog>
 <script>
@@ -53,7 +53,7 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 :::demo
 ```html
 <!-- Table -->
-<el-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</el-button>
+<el-button size="mini" type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</el-button>
 
 <yx-dialog title="收货地址" width="50%" :visible.sync="dialogTableVisible">
   <el-table :data="gridData">
@@ -64,7 +64,7 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 </yx-dialog>
 
 <!-- Form -->
-<el-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
+<el-button size="mini" type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
 
 <yx-dialog title="收货地址" :visible.sync="dialogFormVisible">
   <el-form :model="form">
@@ -79,8 +79,8 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
     </el-form-item>
   </el-form>
   <div slot="footer" class="dialog-footer">
-    <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+    <el-button size="mini" @click="dialogFormVisible = false">取 消</el-button>
+    <el-button size="mini" type="primary" @click="dialogFormVisible = false">确 定</el-button>
   </div>
 </yx-dialog>
 
@@ -130,7 +130,7 @@ export default {
 :::demo 正常情况下，我们不建议使用嵌套的 Dialog，如果需要在页面上同时显示多个 Dialog，可以将它们平级放置。对于确实需要嵌套 Dialog 的场景，我们提供了`append-to-body`属性。将内层 Dialog 的该属性设置为 true，它就会插入至 body 元素上，从而保证内外层 Dialog 和遮罩层级关系的正确。
 ```html
 <template>
-  <el-button type="text" @click="outerVisible = true">点击打开外层 Dialog</el-button>
+  <el-button size="mini" type="text" @click="outerVisible = true">点击打开外层 Dialog</el-button>
   
   <yx-dialog title="外层 Dialog" :visible.sync="outerVisible">
     <yx-dialog
@@ -140,8 +140,8 @@ export default {
       append-to-body>
     </yx-dialog>
     <div slot="footer" class="dialog-footer">
-      <el-button @click="outerVisible = false">取 消</el-button>
-      <el-button type="primary" @click="innerVisible = true">打开内层 Dialog</el-button>
+      <el-button size="mini" @click="outerVisible = false">取 消</el-button>
+      <el-button size="mini" type="primary" @click="innerVisible = true">打开内层 Dialog</el-button>
     </div>
   </yx-dialog>
 </template>
@@ -166,7 +166,7 @@ export default {
 :::demo 将`center`设置为`true`即可使标题和底部居中。`center`仅影响标题和底部区域。Dialog 的内容是任意的，在一些情况下，内容并不适合居中布局。如果需要内容也水平居中，请自行为其添加 CSS。
 
 ```html
-<el-button type="text" @click="centerDialogVisible = true">点击打开 Dialog</el-button>
+<el-button size="mini" type="text" @click="centerDialogVisible = true">点击打开 Dialog</el-button>
 
 <yx-dialog
   title="提示"
@@ -175,8 +175,8 @@ export default {
   center>
   <span>需要注意的是内容是默认不居中的</span>
   <span slot="footer" class="dialog-footer">
-    <el-button @click="centerDialogVisible = false">取 消</el-button>
-    <el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
+    <el-button size="mini" @click="centerDialogVisible = false">取 消</el-button>
+    <el-button size="mini" type="primary" @click="centerDialogVisible = false">确 定</el-button>
   </span>
 </yx-dialog>
 
