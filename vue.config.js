@@ -12,6 +12,12 @@ module.exports = {
     host: '0.0.0.0',
     port: process.env.port || 8088,
     open: true,
+    proxy: {
+      '/element': {
+        target: 'https://element-api.ele.me/',
+        changeOrigin: true
+      }
+    },
     disableHostCheck: true
   },
   pages: {
