@@ -3,7 +3,6 @@
     <el-table
       ref="elTable"
       v-loading="loading"
-      border
       v-bind="$attrs"
       :data="data"
       :cell-style="cellStyle"

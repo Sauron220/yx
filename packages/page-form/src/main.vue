@@ -1,6 +1,6 @@
 <template>
   <div class="yx-page-form">
-    <el-form ref="form" :model="data" :rules="rules" :label-width="labelWidth" :label-position="labelPosition">
+    <el-form ref="form" :model="data" :rules="rules" :label-width="labelWidth" :label-position="labelPosition" v-bind="$attrs">
       <el-row type="flex" align="bottom" :gutter="rowGutter">
         <el-col
           v-for="(item, index) in getConfigList()"
