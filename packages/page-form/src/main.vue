@@ -1,6 +1,6 @@
 <template>
   <div class="yx-page-form">
-    <el-form ref="form" :model="data" :rules="rules" :label-width="labelWidth" :label-position="labelPosition" v-bind="$attrs">
+    <el-form ref="form" v-bind="$attrs" :model="data" :rules="rules" :label-width="labelWidth" :label-position="labelPosition">
       <el-row type="flex" align="bottom" :gutter="rowGutter">
         <el-col
           v-for="(item, index) in getConfigList()"
@@ -10,12 +10,18 @@
           :md="item.colMd ? item.colMd : colMd"
           :lg="item.colLg ? item.colLg : colLg"
         >
-          <!-- solt -->
+          <!-- slot -->
           <template v-if="item.type === 'slot' && item.noForm">
             <slot :name="'form-' + item.prop" />
           </template>
+
           <el-form-item v-else :key="`${item.label}-${item.noValid}`" :prop="item.disabled || item.noValid ? '' : item.prop" :label="item.label">
-            <!-- solt -->
+            <!-- label slot -->
+            <template v-if="item.label === 'custom'" #label>
+              <slot :name="`label-${item.prop}`" />
+            </template>
+
+            <!-- slot -->
             <template v-if="item.type === 'slot' && !item.noForm">
               <slot :name="'form-' + item.prop" />
             </template>
@@ -33,6 +39,7 @@
               @focus="handleEvent(item.event)"
               @change="handleEvent(item.event, data[item.prop])"
             />
+
             <el-input
               v-else-if="['number'].includes(item.type)"
               :key="item.prop"
@@ -43,6 +50,7 @@
               @focus="handleEvent(item.event)"
               @change="handleEvent(item.event, data[item.prop])"
             />
+
             <!-- 计数器 -->
             <el-input-number
               v-if="item.type === 'inputNumber'"
@@ -53,6 +61,7 @@
               style="width: 100%;"
               @change="handleEvent(item.event)"
             />
+
             <!-- 文本输入框 -->
             <el-input
               v-else-if="item.type === 'textarea'"
@@ -64,6 +73,7 @@
               :autosize="item.autosize || { minRows: 2, maxRows: 10 }"
               @focus="handleEvent(item.event)"
             />
+
             <!-- 选择框 -->
             <el-select
               v-else-if="item.type === 'select'"
@@ -105,6 +115,7 @@
                 :value="childItem.value || childItem[item.optVal]"
               />
             </el-select>
+
             <!-- 日期选择框 -->
             <el-date-picker
               v-else-if="item.type === 'date'"
@@ -148,6 +159,7 @@
             <span v-if="item.type === 'text'">{{ data[item.prop] }}</span>
           </el-form-item>
         </el-col>
+
         <el-col v-if="operate.length !== 0" :span="24" :class="{ 'yx-col-auto': isAuto }">
           <div class="yx-search-btn">
             <template v-for="item in operate">
@@ -173,6 +185,7 @@
             </template>
           </div>
         </el-col>
+
         <el-col v-if="operateClass" :class="operateClass">
           <el-form-item>
             <slot name="operate" />
