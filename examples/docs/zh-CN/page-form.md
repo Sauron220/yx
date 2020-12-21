@@ -19,6 +19,13 @@
   :list-type-info='formInfo.listTypeInfo'
   operate-class='col-fluid'
 >
+  <template #label-applNo="slotProps">
+    <span>{{ slotProps.scope.label }}</span>
+    <el-tooltip effect="dark" placement="top">
+      <p slot="content">提示文案文案提示文案文案提<br/>示文案文案提示文案文案提示文案文案提示文案文案提示文案文案</p>
+      <i class="el-icon-question"></i>
+    </el-tooltip>
+  </template>
   <div slot='operate'>
     <el-button type='primary' @click='handleQuery'>
       查询
@@ -44,6 +51,7 @@ export default {
             type: 'input',
             label: '案件编号',
             prop: 'applNo',
+            slot: 'tip',
             colLg: 8
           },
           {

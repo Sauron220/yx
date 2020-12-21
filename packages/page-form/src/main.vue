@@ -17,8 +17,8 @@
 
           <el-form-item v-else :key="`${item.label}-${item.noValid}`" :prop="item.disabled || item.noValid ? '' : item.prop" :label="item.label">
             <!-- label slot -->
-            <template v-if="item.label === 'custom'" #label>
-              <slot :name="`label-${item.prop}`" />
+            <template v-if="item.slot === 'tip'" #label>
+              <slot :name="`label-${item.prop}`" :scope="item" />
             </template>
 
             <!-- slot -->
