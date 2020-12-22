@@ -115,3 +115,13 @@
 .el-button:not(.el-button--text) {
   min-width: 76px;
 }
+
+/* el-tooltip
+ -------------------------- */
+ .el-tooltip__popper {
+   .yx-form__tip {
+     display: inline-block;
+     max-width: 180px;
+     line-height: 22px;
+   }
+ }

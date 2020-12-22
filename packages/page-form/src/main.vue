@@ -1,6 +1,13 @@
 <template>
   <div class="yx-page-form">
-    <el-form ref="form" v-bind="$attrs" :model="data" :rules="rules" :label-width="labelWidth" :label-position="labelPosition">
+    <el-form
+      ref="form"
+      v-bind="$attrs"
+      :model="data"
+      :rules="rules"
+      :label-width="labelWidth"
+      :label-position="labelPosition"
+    >
       <el-row type="flex" align="bottom" :gutter="rowGutter">
         <el-col
           v-for="(item, index) in getConfigList()"
@@ -15,10 +22,29 @@
             <slot :name="'form-' + item.prop" />
           </template>
 
-          <el-form-item v-else :key="`${item.label}-${item.noValid}`" :prop="item.disabled || item.noValid ? '' : item.prop" :label="item.label">
+          <el-form-item
+            v-else
+            :key="`${item.label}-${item.noValid}`"
+            :prop="item.disabled || item.noValid ? '' : item.prop"
+            :label="item.label"
+          >
             <!-- label slot -->
             <template v-if="item.slot === 'tip'" #label>
-              <slot :name="`label-${item.prop}`" :scope="item" />
+              <slot
+                v-if="!!$scopedSlots[`label-${item.prop}`]"
+                :name="`label-${item.prop}`"
+                :scope="item"
+              />
+              <template v-else>
+                <span>{{ item.label }}</span>
+                <el-tooltip effect="dark" placement="top">
+                  <template #content>
+                    <span class="yx-form__tip">{{ item.tipTxt }}</span>
+                  </template>
+                  <i :class="[item.tipIcon || 'el-icon-question']"></i>
+                </el-tooltip>
+                <span>{{ $attrs['label-suffix'] }}</span>
+              </template>
             </template>
 
             <!-- slot -->
@@ -29,6 +55,7 @@
             <!-- 普通输入框 -->
             <el-input
               v-if="['input', 'password'].includes(item.type)"
+              v-bind="item.$attrs"
               :key="item.prop"
               v-model="data[item.prop]"
               :type="item.type"
@@ -43,6 +70,7 @@
             <el-input
               v-else-if="['number'].includes(item.type)"
               :key="item.prop"
+              v-bind="item.$attrs"
               v-model.number="data[item.prop]"
               :type="item.type"
               :disabled="item.disabled"
@@ -53,8 +81,9 @@
 
             <!-- 计数器 -->
             <el-input-number
-              v-if="item.type === 'inputNumber'"
+              v-else-if="item.type === 'inputNumber'"
               v-model="data[item.prop]"
+              v-bind="item.$attrs"
               :min="item.min"
               :max="item.max"
               :controls="item.controls"
@@ -67,6 +96,7 @@
               v-else-if="item.type === 'textarea'"
               :key="item.prop"
               v-model.trim="data[item.prop]"
+              v-bind="item.$attrs"
               :type="item.type"
               :disabled="item.disabled"
               :placeholder="getPlaceholder(item)"
@@ -79,6 +109,7 @@
               v-else-if="item.type === 'select'"
               :key="item.prop"
               v-model="data[item.prop]"
+              v-bind="item.$attrs"
               default-first-option
               :disabled="item.disabled"
               :clearable="item.clearable ? item.clearable : true"
@@ -101,6 +132,7 @@
               v-else-if="item.type === 'multselect'"
               :key="item.prop"
               v-model="data[item.prop]"
+              v-bind="item.$attrs"
               :disabled="item.disabled"
               multiple
               :clearable="item.clearable ? item.clearable : true"
@@ -121,6 +153,7 @@
               v-else-if="item.type === 'date'"
               :key="item.prop"
               v-model="data[item.prop]"
+              v-bind="item.$attrs"
               :type="item.dateType"
               :picker-options="item.TimePickerOptions"
               :clearable="item.clearable"
@@ -138,6 +171,7 @@
               v-else-if="item.type === 'time'"
               :key="item.prop"
               v-model="data[item.prop]"
+              v-bind="item.$attrs"
               :placeholder="getPlaceholder(item)"
               :picker-options="item.TimePickerOptions"
               @focus="handleEvent(item.event)"
@@ -148,6 +182,7 @@
               v-else-if="item.type === 'atime'"
               :key="item.prop"
               v-model="data[item.prop]"
+              v-bind="item.$attrs"
               :is-range="item.isRange"
               :placeholder="getPlaceholder(item)"
               :value-format="item.valueFormat"
@@ -276,7 +311,7 @@ export default {
   },
   watch: {
     data: {
-      handler: function (val) {
+      handler: function () {
         // 将form实例返回到父级
         this.$emit('update:refObj', this.$refs.form)
       },

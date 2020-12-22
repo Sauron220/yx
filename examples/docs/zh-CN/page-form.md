@@ -19,13 +19,6 @@
   :list-type-info='formInfo.listTypeInfo'
   operate-class='col-fluid'
 >
-  <template #label-applNo="slotProps">
-    <span>{{ slotProps.scope.label }}</span>
-    <el-tooltip effect="dark" placement="top">
-      <p slot="content">提示文案文案提示文案文案提<br/>示文案文案提示文案文案提示文案文案提示文案文案提示文案文案</p>
-      <i class="el-icon-question"></i>
-    </el-tooltip>
-  </template>
   <div slot='operate'>
     <el-button type='primary' @click='handleQuery'>
       查询
@@ -51,7 +44,6 @@ export default {
             type: 'input',
             label: '案件编号',
             prop: 'applNo',
-            slot: 'tip',
             colLg: 8
           },
           {
@@ -124,6 +116,16 @@ export default {
 | refObj | 表单引用兑现 | object | - | - |
 | operate | 操作按钮集合 | array | - | - |
 | operateClass | 操作按钮class | string | - | - |
+
+### fieldList
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| type | 组件类型 | string | input、password、number、inputNumber、textarea、select、multselect、date、time、atime、text | - |
+| label | 标签文本 | string | - | - |
+| prop | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | 传入 Form 组件的 model 中的字段 | - | - |
+| disabled | 禁用 | boolean | - | false |
+| event | 事件 | string | - | - |
+| $attrs | 属性,传递原本element-ui组件的属性定义 | object | - | - |
 
 ### Slot
 
