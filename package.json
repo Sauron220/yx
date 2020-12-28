@@ -1,10 +1,11 @@
 {
   "name": "yx-plus",
-  "version": "1.0.2-9",
+  "version": "1.0.3",
   "private": false,
   "keywords": [
     "yx",
     "yx-ui",
+    "yx-plus",
     "ui",
     "vue",
     "frontend",

@@ -57,7 +57,9 @@ export default {
             label: '是否退回案件',
             prop: 'backspaceFlag',
             list: 'spaceOpts',
-            colLg: 8
+            colLg: 8,
+            relyProp: 'dateApplBegin',
+            allows: ['NO_EMPTY']
           }
         ],
         rules: {},
@@ -124,6 +126,8 @@ export default {
 | label | 标签文本 | string | - | - |
 | prop | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | 传入 Form 组件的 model 中的字段 | - | - |
 | disabled | 禁用 | boolean | - | false |
+| relyProp | 依赖字段 | prop | - | - |
+| allows | 允许此项展示的条件，和relyProp一起使用 | array | - | - |
 | event | 事件 | string | - | - |
 | $attrs | 属性,传递原本element-ui组件的属性定义 | object | - | - |
 
@@ -137,5 +141,6 @@ export default {
 ### Events
 | 事件名称 | 说明 | 回调参数 |
 |---------- |-------- |---------- |
-| handleEvent | 各字段绑定事件 | (事件名称, 数据, 操作项配置) |
+| handleEvent | 各字段绑定事件(change, focus) | (事件名称, 数据, 操作项配置) |
 | handleClick | 操作按钮绑定事件 | (事件名称, 数据) |
+| handleInput | 各字段绑定事件(input) | (事件名称, 数据) |
