@@ -98,12 +98,12 @@
               <el-input
                 v-else-if="item.type === 'textarea'"
                 :key="item.prop"
-                v-model.trim="data[item.prop]"
+                v-model="data[item.prop]"
                 v-bind="item.$attrs"
                 :type="item.type"
                 :disabled="item.disabled"
                 :placeholder="getPlaceholder(item)"
-                :autosize="item.autosize || { minRows: 2, maxRows: 10 }"
+                :autosize="item.autosize"
                 @focus="handleEvent(item.event)"
               />
 
