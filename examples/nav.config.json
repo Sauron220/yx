@@ -42,6 +42,10 @@
             {
               "path": "/dialog",
               "title": "Dialog 全局弹窗"
+            },
+            {
+              "path": "/drawer",
+              "title": "Drawer 抽屉"
             }
           ]
         }
@@ -91,6 +95,10 @@
             {
               "path": "/dialog",
               "title": "Dialog"
+            },
+            {
+              "path": "/drawer",
+              "title": "Drawer"
             }
           ]
         }

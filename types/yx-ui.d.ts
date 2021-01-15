@@ -6,6 +6,7 @@ import { YXPageForm } from './page-form'
 import { YXPageTable } from './page-table'
 import { YXRow } from './row'
 import { YXDialog } from './dialog'
+import { YXDrawer } from './drawer'
 
 export interface InstallationOptions {
   locale: any,
@@ -40,3 +41,6 @@ export class Row extends YXRow {}
 
 /** Dialog Component */
 export class Dialog extends YXDialog {}
+
+/** Drawer Component */
+export class Drawer extends YXDrawer {}
