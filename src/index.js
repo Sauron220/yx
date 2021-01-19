@@ -30,7 +30,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.0.4-1',
+  version: '1.0.4-2',
   install,
   Block,
   PageForm,
