@@ -61,6 +61,7 @@
                 v-model="data[item.prop]"
                 :type="item.type"
                 :disabled="item.disabled"
+                :clearable="item.clearable || false"
                 :placeholder="
                 item.placeholder ? item.placeholder : getPlaceholder(item)
               "
